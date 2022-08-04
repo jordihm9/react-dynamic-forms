@@ -9,7 +9,7 @@ declare module 'dynamic-forms' {
     label?: string;
     name: string;
     required?: boolean;
-    type: Pick<HTMLInputTypeAttribute, 'checkbox' | 'password' |'radio' | 'select' | 'text'>;
+    type: 'checkbox' | 'password' |'radio' | 'select' | 'text';
   }
 
   interface TextField extends Field {
