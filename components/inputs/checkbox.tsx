@@ -11,17 +11,20 @@ export const InputCheckbox = ({
 }: InputCheckboxProps): JSX.Element => {
   return (
     <>
-      {options.map((opt) => (
-        <div key={`${formId}-${name}-${opt.value}`}>
-          <input
-            type="checkbox"
-            id={opt.value}
-            value={opt.value}
-            name={name}
-          />
-          <label htmlFor={opt.value}>{opt.label}</label>
-        </div>
-      ))}
+      {options.map((opt) => {
+        const optionName = `${name}-${opt.value}`;
+        return (
+          <div key={`${formId}-${optionName}`}>
+            <input
+              type="checkbox"
+              id={optionName}
+              value={opt.value}
+              name={name}
+            />
+            <label htmlFor={optionName}>{opt.label}</label>
+          </div>
+        )
+      })}
     </>
   );
 };

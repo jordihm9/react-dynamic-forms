@@ -11,17 +11,20 @@ export const InputRadio = ({
 }: InputRadioProps): JSX.Element => {
   return (
     <>
-      {options.map((opt) => (
-        <div key={`${formId}-${name}-${opt.value}`}>
-          <label htmlFor={opt.value}>{opt.label}</label>
-          <input
-            type="radio"
-            id={opt.value}
-            value={opt.value}
-            name={name}
-          />
-        </div>
-      ))}
+      {options.map((opt) => {
+        const optionName = `${name}-${opt.value}`;
+        return (
+          <div key={`${formId}-${optionName}`}>
+            <label htmlFor={optionName}>{opt.label}</label>
+            <input
+              type="radio"
+              id={opt.value}
+              value={opt.value}
+              name={optionName}
+            />
+          </div>
+        )
+      })}
     </>
   );
 };
