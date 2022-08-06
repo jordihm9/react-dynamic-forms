@@ -17,13 +17,13 @@ export const InputRadio = ({
         const optionName = `${name}-${opt.value}`;
         return (
           <div key={`${formId}-${optionName}`}>
-            <Label htmlFor={optionName}>{opt.label}</Label>
             <input
               type="radio"
               id={opt.value}
               value={opt.value}
               name={optionName}
             />
+            <Label htmlFor={optionName}>{opt.label}</Label>
           </div>
         )
       })}
