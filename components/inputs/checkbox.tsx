@@ -1,5 +1,7 @@
 import { CheckboxField, Form } from 'dynamic-forms';
 
+import { Label } from '@components/label';
+
 interface InputCheckboxProps extends CheckboxField {
   formId: Form['id'];
 }
@@ -21,7 +23,7 @@ export const InputCheckbox = ({
               value={opt.value}
               name={name}
             />
-            <label htmlFor={optionName}>{opt.label}</label>
+            <Label htmlFor={optionName}>{opt.label}</Label>
           </div>
         )
       })}

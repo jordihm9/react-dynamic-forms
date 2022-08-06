@@ -1,11 +1,13 @@
 import { TextField } from 'dynamic-forms';
 
+import { Label } from '@components/label';
+
 interface InputTextProps extends TextField {}
 
 export const InputText = ({ label, name, placeholder }: InputTextProps): JSX.Element => {
   return (
     <>
-      <label htmlFor={name}>{label}</label>
+      <Label htmlFor={name}>{label}</Label>
       <input
         id={name}
         name={name}

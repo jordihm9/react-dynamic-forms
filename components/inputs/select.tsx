@@ -1,5 +1,7 @@
 import { Form, SelectField } from 'dynamic-forms';
 
+import { Label } from '@components/label';
+
 interface InputSelectProps extends SelectField {
   formId: Form['id'];
 }
@@ -9,7 +11,7 @@ export const InputSelect = ({
 }: InputSelectProps): JSX.Element => {
   return (
     <>
-      <label htmlFor={name}>{label}</label>
+      <Label htmlFor={name}>{label}</Label>
       <select id={name} name={name}>
         {options.map((opt) => (
           <option
