@@ -10,3 +10,5 @@ export const Label = ({ children, htmlFor }: LabelProps): JSX.Element => {
     </label>
   );
 };
+
+Label.displayName = 'Label';
