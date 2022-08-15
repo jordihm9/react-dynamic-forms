@@ -53,13 +53,14 @@
       ]
     },
     {
-      "id": "example-newsletter",
-      "label": "Subscribe to newsletter agreement",
-      "name": "newsletter-agreement",
+      "id": "example-subscriptions",
+      "label": "Subscriptions",
+      "name": "subscriptions-agreement",
       "required": false,
       "type": "checkbox",
       "options": [
-        { "label": "Subscribe", "value": "true" }
+        { "label": "Newsletter", "value": "newsletter" },
+        { "label": "Security Updates", "value": "security" }
       ]
     }
   ]
